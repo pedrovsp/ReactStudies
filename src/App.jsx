@@ -7,8 +7,10 @@ import StudentGrade from './components/StudentGrades'
 import Parent from './components/Parent'
 import Child from './components/Child'
 import StudentList from './components/StudentList'
+import ProductTable from './components/ProductTable'
 
 import students from './data/students';
+import products from './data/products';
 
 export default () => (
     <div className="Grid">
@@ -23,6 +25,9 @@ export default () => (
         </Card>
         <Card title="List card" desc="Card with lists" color="#d63447">
             <StudentList students={ students }></StudentList>
+        </Card> 
+        <Card title="Product card" desc="Card with table" color="#ff5200">
+            <ProductTable products={ products }></ProductTable>
         </Card>        
     </div>
 )
