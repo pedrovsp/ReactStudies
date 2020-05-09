@@ -4,8 +4,8 @@ export default function(props) {
     const grade = randomNumber(props.minGrade, props.maxGrade)
     return (
         <div>
-            <h5>Name: {props.name}</h5>
-            <div>Grade: {grade}</div>
+            <h3>Name: {props.name}</h3>
+            <h4>Grade: {grade}</h4>
         </div>
     )
 }

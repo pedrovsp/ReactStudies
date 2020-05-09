@@ -1,5 +1,5 @@
 import React from 'react';
 
 export default (props) => {
-    return <button>I'm going</button>
+    return <div>{props.name} {props.familyName}</div>
 }

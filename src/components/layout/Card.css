@@ -1,0 +1,30 @@
+.Card {
+    border: 1px solid;
+    border-radius: 8px;
+    margin-bottom: 10px;
+}
+.Card .Header {
+    border-bottom: 1px solid;
+    padding: 0.5em 1em;
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    color: white;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+}
+
+.Card .Header .Title {
+    font-weight: bold;
+}
+
+
+.Card .Header .Desc {
+    font-size: 10px;
+}
+
+.Card .Content {
+    padding: 0.5em 1em;
+    display: flex;
+    justify-content: center;
+}
