@@ -9,6 +9,7 @@ import Child from './components/Child'
 import ApprovedList from './components/ApprovedList'
 import StudentList from './components/StudentList'
 import ProductTable from './components/ProductTable'
+import Input from './components/forms/Input/Input'
 
 import students from './data/students';
 import products from './data/products';
@@ -32,6 +33,9 @@ export default () => (
         </Card>        
         <Card title="Approved card" desc="Appoved students" color="#7d5a5a">
             <ApprovedList students={ students }></ApprovedList>
+        </Card>    
+        <Card title="Controled state" desc="Controling state" color="#140303">
+            <Input></Input>
         </Card>        
     </div>
 )
