@@ -10,6 +10,7 @@ import ApprovedList from './components/ApprovedList'
 import StudentList from './components/StudentList'
 import ProductTable from './components/ProductTable'
 import Input from './components/forms/Input/Input'
+import Counter from './components/Counter/Counter'
 
 import students from './data/students';
 import products from './data/products';
@@ -36,6 +37,10 @@ export default () => (
         </Card>    
         <Card title="Controled state" desc="Controling state" color="#140303">
             <Input></Input>
-        </Card>        
+        </Card>
+        <Card title="Counter" desc="Controlling state" color="#259f6c">
+            <Counter></Counter>
+            <Counter initAt={5}></Counter>
+        </Card>    
     </div>
 )
