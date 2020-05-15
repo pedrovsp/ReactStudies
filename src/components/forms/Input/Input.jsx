@@ -2,17 +2,29 @@ import './Input.css'
 import React, { useState } from 'react'
 
 export default props => {
-    const [value, setValue] = useState("Init");
+    let initValue = ''
+    
+    if (props.number) {
+        initValue = 0
+    } else {
+        initValue = 'Init'
+    }
+
+    const [value, setValue] = useState(initValue);
 
     function onChange(event) {
-        setValue(event.target.value);
+        if (props.number) {
+            if (event.target.value.match(/\d+/g)) {
+                setValue(event.target.value);
+            } 
+        } else {
+            setValue(event.target.value);
+        }
     }
+
     return (
         <div>
-            <h2>{value}</h2>
-            <div>
-                <input value={value} onChange={onChange}></input>
-            </div>
+            <input value={value} onChange={onChange}></input>
         </div>
     )
 }
