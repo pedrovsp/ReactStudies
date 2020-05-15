@@ -3,7 +3,7 @@ import React from 'react'
 export default (props) => {
     const rows = props.products.map(product => {
         return (
-            <tr>
+            <tr key={product.id}>
                 <th>{product.id}</th>
                 <th>{product.name}</th>
                 <th>R$ {product.price}</th>
