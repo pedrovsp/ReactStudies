@@ -1,6 +1,5 @@
 import React from 'react';
 import If from '../utils/If'
-import { Else } from '../utils/If'
 
 export default (props) => {
     const listItems = props.students.map(student => {
