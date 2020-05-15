@@ -3,12 +3,25 @@ import React, { Component } from 'react'
 export default class Counter extends Component {
 
     state = {
-        count: this.props.initAt ? this.props.initAt : 0
+        count: this.props.initAt ? this.props.initAt : 0,
+        step: this.props.step ? this.props.step : 1,
     }
+
+    componentWillReceiveProps(nextProps) {
+        if (nextProps.step !== this.state.step) {
+          this.setState({ step: nextProps.step });
+        }
+      }
 
     increment() {
         this.setState({
-            count: this.state.count += 1
+            count: this.state.count += this.state.step,
+        })
+    }
+
+    setStep(newValue) {
+        this.setState({
+            step: newValue
         })
     }
 
