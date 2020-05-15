@@ -5,7 +5,7 @@ export default props => {
     let initValue = ''
     
     if (props.number) {
-        initValue = 0
+        initValue = 1
     } else {
         initValue = 'Init'
     }
@@ -14,17 +14,24 @@ export default props => {
 
     function onChange(event) {
         if (props.number) {
-            if (event.target.value.match(/\d+/g)) {
+            if (event.target.value.match(/\d+$/g)) {
                 setValue(event.target.value);
+                if (props.emitChanges) {
+                    props.emitChanges(Number(event.target.value));
+                }
             } 
         } else {
             setValue(event.target.value);
+            if (props.emitChanges) {
+                props.emitChanges(event.target.value);
+            }
         }
+
     }
 
     return (
         <div>
-            <input value={value} onChange={onChange}></input>
+           Step: <input value={value} onChange={onChange}></input>
         </div>
     )
 }
