@@ -6,6 +6,7 @@ import Card from './components/layout/Card'
 import StudentGrade from './components/StudentGrades'
 import Parent from './components/Parent'
 import Child from './components/Child'
+import ApprovedList from './components/ApprovedList'
 import StudentList from './components/StudentList'
 import ProductTable from './components/ProductTable'
 
@@ -28,6 +29,9 @@ export default () => (
         </Card> 
         <Card title="Product card" desc="Card with table" color="#ff5200">
             <ProductTable products={ products }></ProductTable>
+        </Card>        
+        <Card title="Approved card" desc="Appoved students" color="#7d5a5a">
+            <ApprovedList students={ students }></ApprovedList>
         </Card>        
     </div>
 )
