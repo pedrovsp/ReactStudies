@@ -14,8 +14,9 @@ export default class Counter extends Component {
       }
 
     increment() {
+        const newValue = this.state.count + this.state.step
         this.setState({
-            count: this.state.count += this.state.step,
+            count: newValue,
         })
     }
 
