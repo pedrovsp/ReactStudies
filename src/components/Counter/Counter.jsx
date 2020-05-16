@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component } from 'react';
 
 export default class Counter extends Component {
 
@@ -7,11 +7,11 @@ export default class Counter extends Component {
         step: this.props.step ? this.props.step : 1,
     }
 
-    componentWillReceiveProps(nextProps) {
-        if (nextProps.step !== this.state.step) {
-          this.setState({ step: nextProps.step });
+    componentDidUpdate(prevProps) {
+        if (prevProps.step !== this.props.step) {
+            this.setState({ step: Number(this.props.step) });
         }
-      }
+    }
 
     increment() {
         const newValue = this.state.count + this.state.step
