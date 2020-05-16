@@ -1,0 +1,29 @@
+.Box {
+    display: flex;
+    flex-flow: column;
+    justify-content: center;
+    align-items: center;
+
+    .Numbers {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin-bottom: 15px;
+
+        .Number {
+            padding: 3px;
+            margin: 0 5px;
+            min-width: 25px;
+            min-height: 25px;
+            text-align: center;
+
+            &.Odd {
+                background-color: #fe8aa9;
+            }
+
+            &.Even {
+                background-color: #fe8a;
+            }
+        }
+    }
+}

@@ -15,6 +15,7 @@ import CounterWithInput from './components/CounterWithInput'
 
 import students from './data/students';
 import products from './data/products';
+import Lotto from './lotto/components/Lotto';
 
 export default () => (
     <div className="Grid">
@@ -45,6 +46,9 @@ export default () => (
         </Card>
         <Card title="Counter with Input" desc="Controlling state" color="#c81912">
             <CounterWithInput></CounterWithInput>
+        </Card>
+        <Card title="Lotto" desc="Lotto exercise" color="#b5076b">
+            <Lotto quantity={5}></Lotto>
         </Card>
     </div>
 )
