@@ -3,7 +3,7 @@ import { childrenProps } from '../utils/react-utils'
 import If from '../utils/If'
 
 export default (props) => {
-    let customProps = {...props};
+    let customProps = { ...props };
     const [name, setWhoCalled] = useState('')
     const [age, setCallerAge] = useState(0)
 
@@ -14,10 +14,10 @@ export default (props) => {
 
     return (
         <div>
-            <h3>Family { props.familyName }</h3>
+            <h3>Family {props.familyName}</h3>
             <If condition={name !== ''}>
                 <h5>{name} called, he is {age} years old</h5>
             </If>
-            { childrenProps(customProps) }
+            {childrenProps(customProps)}
         </div>)
 }

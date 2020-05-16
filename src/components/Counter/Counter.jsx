@@ -1,4 +1,6 @@
+import './Counter.css'
 import React, { Component } from 'react';
+import { Button, ButtonTypes } from '../Button/Button'
 
 export default class Counter extends Component {
 
@@ -20,6 +22,14 @@ export default class Counter extends Component {
         })
     }
 
+
+    decrement() {
+        const newValue = this.state.count - this.state.step
+        this.setState({
+            count: newValue,
+        })
+    }
+
     setStep(newValue) {
         this.setState({
             step: newValue
@@ -31,7 +41,10 @@ export default class Counter extends Component {
             <div>
                 <h2>Counter</h2>
                 <h3>Counting: {this.state.count}</h3>
-                <button onClick={() => this.increment()}>Increment</button>
+                <div className="ButtonBox">
+                    <Button type={ButtonTypes.Round} text='+' function={this.increment.bind(this)}></Button>
+                    <Button type={ButtonTypes.Round} text='-' function={this.decrement.bind(this)}></Button>
+                </div>
             </div>
         )
     }
