@@ -17,7 +17,7 @@ export default class CounterWithInput extends Component {
     render() {
         return (
             <div>
-                <Input number={true} emitChanges={this.inputChanges.bind(this)}></Input>
+                <Input label='Step' number={true} emitChanges={this.inputChanges.bind(this)}></Input>
                 <Counter step={this.state.step}></Counter>
             </div>
         )

@@ -37,7 +37,7 @@ export default () => (
             <ApprovedList students={students}></ApprovedList>
         </Card>
         <Card title="Controled state" desc="Controling state" color="#140303">
-            <Input></Input>
+            <Input label="Enter text"></Input>
         </Card>
         <Card title="Counter" desc="Controlling state" color="#259f6c">
             <Counter></Counter>
