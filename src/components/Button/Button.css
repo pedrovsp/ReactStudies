@@ -1,0 +1,11 @@
+.Button {
+    cursor: pointer;
+    background: transparent;
+    border: 1px solid #438211;
+}
+
+.Round {
+    border-radius: 50%;
+    min-width: 30px;
+    min-height: 30px;
+}
