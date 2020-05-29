@@ -6,17 +6,10 @@ export default class Counter extends Component {
 
     state = {
         count: this.props.initAt ? this.props.initAt : 0,
-        step: this.props.step ? this.props.step : 1,
-    }
-
-    componentDidUpdate(prevProps) {
-        if (prevProps.step !== this.props.step) {
-            this.setState({ step: Number(this.props.step) });
-        }
     }
 
     increment() {
-        const newValue = this.state.count + this.state.step
+        const newValue = this.state.count + this.props.step
         this.setState({
             count: newValue,
         })
@@ -24,15 +17,9 @@ export default class Counter extends Component {
 
 
     decrement() {
-        const newValue = this.state.count - this.state.step
+        const newValue = this.state.count - this.props.step
         this.setState({
             count: newValue,
-        })
-    }
-
-    setStep(newValue) {
-        this.setState({
-            step: newValue
         })
     }
 
